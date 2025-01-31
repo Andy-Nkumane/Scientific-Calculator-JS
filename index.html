@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div id="mode-indicator"></div>
+        <input type="text" id="screen" disabled>
+        <div class="calc-buttons">
+            <!-- Mode Toggle -->
+            <button id="mode-toggle" onclick="toggleMode()">Radians</button>
+            <!-- Mode Toggle end -->
+            <button onclick="appendToScreen(',')">,</button>
+            <!-- Scientific Functions -->
+            <button onclick="appendToScreen('Math.pow(')">x^y</button>
+            <button onclick="appendToScreen('Math.exp(')">e^x</button>
+            <button onclick="appendToScreen('Math.abs(')">|x|</button>
+            <button onclick="appendToScreen('Math.round(')">round</button>
+            <button onclick="appendToScreen('Math.floor(')">floor</button>
+            <button onclick="appendToScreen('Math.ceil(')">ceil</button>
+            <button onclick="appendToScreen('Math.PI')">π</button>
+            <button onclick="appendToScreen('Math.E')">e</button>
+            <button onclick="appendToScreen('Math.sin(')">sin</button>
+            <button onclick="appendToScreen('Math.cos(')">cos</button>
+            <button onclick="appendToScreen('Math.tan(')">tan</button>
+            <button onclick="appendToScreen('Math.log(')">log</button>
+            <button onclick="appendToScreen('Math.sqrt(')">√</button>
+            <!-- Scientific Functions end -->
+            <button onclick="appendToScreen('7')">7</button>
+            <button onclick="appendToScreen('8')">8</button>
+            <button onclick="appendToScreen('9')">9</button>
+            <button onclick="clearScreen()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="appendToScreen('4')">4</button>
+            <button onclick="appendToScreen('5')">5</button>
+            <button onclick="appendToScreen('6')">6</button>
+            <button onclick="appendToScreen('*')">*</button>
+            <button onclick="appendToScreen('/')">/</button>
+            <button onclick="appendToScreen('1')">1</button>
+            <button onclick="appendToScreen('2')">2</button>
+            <button onclick="appendToScreen('3')">3</button>
+            <button onclick="appendToScreen('+')">+</button>
+            <button onclick="appendToScreen('-')">-</button>
+            <button onclick="appendToScreen('0')">0</button>
+            <button onclick="appendToScreen('.')">.</button>
+            <button onclick="appendToScreen('(')">(</button>
+            <button onclick="appendToScreen(')')">)</button>
+            <button onclick="calculate()">=</button>
+        </div>
+    </d<div id="mode-indicator"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
