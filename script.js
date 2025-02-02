@@ -1,4 +1,5 @@
-let mode = 'degrees'; // Default mode
+// Default mode
+let mode = 'degrees'; 
 
 function clearScreen() {
     document.getElementById("screen").value = "";
@@ -37,12 +38,12 @@ function calculate() {
     const expression = document.getElementById("screen").value;
 
     if (mode === 'degrees') {
-        // Replace sin, cos, tan with their degree versions
         const degExpression = expression.replace(/Math.sin\(/g, 'sinDeg(')
             .replace(/Math.cos\(/g, 'cosDeg(')
             .replace(/Math.tan\(/g, 'tanDeg(');
 
         try {
+            // converts radians to degrees
             const func = new Function('sinDeg', 'cosDeg', 'tanDeg', `return ${degExpression};`);
             const result = func(
                 x => Math.sin(x * Math.PI / 180),
